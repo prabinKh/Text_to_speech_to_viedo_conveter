@@ -1,0 +1,6 @@
+﻿::PII Prevention Tools::[html]Which of the following tools would work best to prevent the exposure of PII outside of an organization?{
+    =DLP: Data Loss Prevention
+    ~PAM: Privileged Access Management
+    ~IDS: Intrusion Detection System
+    ~PKI: Public Key Infrastructure
+}

@@ -1,0 +1,24 @@
+services:
+  web:
+    build:
+      context: ./demo/
+    command: gunicorn demo.wsgi:application --bind 0.0.0.0:8000 
+    volumes:
+      - ./demo/:/user/src/app/
+      - static_files:/user/src/app/staticfiles 
+    expose:
+      - "8000"
+
+
+  nginx:
+    build:
+      context: ./nginx/
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d/
+      - static_files:/home/app/staticfiles
+
+volumes:
+  static_files:
+
