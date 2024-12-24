@@ -384,3 +384,4 @@ def handle_video_to_audio(video_path, output_path):
     except Exception as e:
         print(f"Error extracting audio: {str(e)}")
         return None
+# nono
